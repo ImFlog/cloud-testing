@@ -1,6 +1,3 @@
-[submodule "docker-windows/docker-machine"]
-	path = docker-windows/docker-machine
-	url = git@github.com-ImFlog:StefanScherer/windows-docker-machine.git
-[submodule "docker-windows/packer"]
-	path = docker-windows/packer
-	url = git@github.com-ImFlog:StefanScherer/packer-windows.git
+[submodule "azure/windows-docker-machine"]
+	path = azure/windows-docker-machine
+	url = git@github.com:StefanScherer/windows-docker-machine.git
