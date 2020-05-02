@@ -1,4 +1,4 @@
-package com.github.imflog.awscloudtesting
+package com.github.imflog.aws
 
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB
 import com.amazonaws.services.dynamodbv2.document.Item
@@ -39,20 +39,34 @@ class PokemonRepository(
                 .withAttributesToGet("id", "name")
         ).items
 
-        return scanResult.map { fromAttributeValue<PokemonDto>(it, objectMapper) }.sortedBy(PokemonDto::id)
+        return scanResult.map {
+            fromAttributeValue<PokemonDto>(
+                it,
+                objectMapper
+            )
+        }.sortedBy(PokemonDto::id)
     }
 
     fun findOne(id: Int): Pokemon {
         val request = GetItemRequest()
             .withTableName(POKE_TABLE)
             .withKey(mapOf("id" to AttributeValue().withN(id.toString())))
-        return fromAttributeValue(dynamoDbClient.getItem(request).item, objectMapper)
+        return fromAttributeValue(
+            dynamoDbClient.getItem(
+                request
+            ).item, objectMapper
+        )
     }
 
     fun insertPokemon(pokemon: Pokemon) {
         val putItemRequest = PutItemRequest()
             .withTableName(POKE_TABLE)
-            .withItem(toAttributeValues(pokemon, objectMapper))
+            .withItem(
+                toAttributeValues(
+                    pokemon,
+                    objectMapper
+                )
+            )
         dynamoDbClient.putItem(putItemRequest)
     }
 }

@@ -1,4 +1,4 @@
-package com.github.imflog.gcpcloudtesting
+package com.github.imflog.aws
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.context.properties.EnableConfigurationProperties
@@ -8,7 +8,7 @@ import org.springframework.scheduling.annotation.EnableScheduling
 
 @SpringBootApplication
 @EnableScheduling
-//@EnableConfigurationProperties(DatastoreConfig::class, PubsubConfig::class)
+@EnableConfigurationProperties(DynamoDBConfig::class, SqsConfig::class)
 class Application
 
 fun main(args: Array<String>) {

@@ -1,4 +1,4 @@
-package com.github.imflog.awscloudtesting
+package com.github.imflog.aws
 
 import com.amazonaws.services.sqs.AmazonSQS
 import com.fasterxml.jackson.databind.ObjectMapper

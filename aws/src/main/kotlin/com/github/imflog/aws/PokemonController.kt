@@ -1,4 +1,4 @@
-package com.github.imflog.awscloudtesting
+package com.github.imflog.aws
 
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable

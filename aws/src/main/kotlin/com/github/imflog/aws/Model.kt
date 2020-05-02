@@ -1,4 +1,4 @@
-package com.github.imflog.awscloudtesting
+package com.github.imflog.aws
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.fasterxml.jackson.annotation.JsonInclude

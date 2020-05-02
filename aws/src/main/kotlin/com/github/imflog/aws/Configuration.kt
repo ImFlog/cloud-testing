@@ -1,4 +1,4 @@
-package com.github.imflog.awscloudtesting
+package com.github.imflog.aws
 
 import com.amazonaws.client.builder.AwsClientBuilder
 import com.amazonaws.regions.Regions
